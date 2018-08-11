@@ -63,14 +63,11 @@ let make ~result_list _children = {
         result_list
         (SMap.empty, []) in
     let result_list =
-      List.fold_right
-        (fun contest_id acm ->
-          List.fold_right
-            (fun result acm -> result :: acm)
-            (result_set contest_id (SMap.find contest_id result_map))
-            acm)
-        contest_list
-        [] in
+      List.fold_left
+        (fun acc contest_id ->
+          acc @ result_set contest_id (SMap.find contest_id result_map))
+        []
+        contest_list in
     table ~class_name:"table" [
       thead [
         tr [
