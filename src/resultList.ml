@@ -71,12 +71,12 @@ let make ~result_list _children = {
     table ~class_name:"table" [
       thead [
         tr [
-          td [];
-          td [];
-          td [];
-          td [];
-          td [];
-          td []
+          td [ s {j|問題|j} ];
+          td [ s {j|結果|j} ];
+          td [ s {j|点数|j} ];
+          td [ s {j|日時|j} ];
+          td [ s {j|時間|j} ];
+          td [ s {j|言語|j} ]
         ]
       ];
       tbody result_list
