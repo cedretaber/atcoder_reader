@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@glennsl/bs-json@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@glennsl/bs-json/-/bs-json-3.0.0.tgz#b4e1cf6612270a8dd7287a8a71ebe17e8f0fb683"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -785,6 +781,10 @@ bs-fetch@^0.3.0:
 bs-platform@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.3.tgz#4510c1c915cc5b169b5717e5c0ada52d3f99ff98"
+
+bsb-js@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/bsb-js/-/bsb-js-1.1.6.tgz#cd59b2b85e1717ac023293f80aceda421730eb67"
 
 buffer-equal@0.0.1:
   version "0.0.1"
