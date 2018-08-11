@@ -1,0 +1,21 @@
+{
+  "name": "atcoder_reader",
+  "version": "0.1.0",
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    "reason-react",
+    "bs-fetch"
+  ],
+  "warnings": {
+    "error" : "+101"
+  },
+  "refmt": 3
+}
