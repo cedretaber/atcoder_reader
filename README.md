@@ -1,16 +1,20 @@
 
+# ATCODER READER
 
-# Build
-```
-npm run build
-```
+## Build
 
-# Watch
-
-```
-npm run watch
+```bash
+$ yarn run build
 ```
 
+## Watch
 
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+```bash
+$ yarn run watch
+```
+
+## Server
+
+```bash
+$ yarn start
+```
