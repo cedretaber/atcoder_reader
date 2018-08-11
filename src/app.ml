@@ -76,16 +76,11 @@ let reducer action state = match action, state with
     else
       let url = {j|https://kenkoooo.com/atcoder/atcoder-api/results?user=$user_id|j} in
       RR.SideEffects Js.Promise.(fun self ->
-        let _ =
-          Fetch.fetch url
-          |> then_ Fetch.Response.json
-          |> then_ (fun json ->
-            Js.log json;
-            resolve @@ self.send (SuccessFetchResult json))
-          |> catch (fun err ->
-            Js.log err;
-            resolve @@ self.send FailureFetchResult) in
-        ())
+        Fetch.fetch url
+        |> then_ Fetch.Response.json
+        |> then_ (fun json -> resolve @@ self.send (SuccessFetchResult json))
+        |> catch (fun _ -> resolve @@ self.send FailureFetchResult)
+        |> ignore)
   | SuccessFetchResult json, _ ->
     Js.Json.(
       let result_array = match decodeArray json with
